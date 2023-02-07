@@ -1,0 +1,74 @@
+@import url("reset.css");
+
+/*!Не вважайте будь-ласка за помилку. Я навмисне додав кілька розмірів шрифту, щоб стаття хоч трошки була на щось схожа. */
+
+* {
+	font-size: 16px;
+}
+h1 {
+	font-size: 24px;
+	color: darkred;
+}
+h2 {
+	font-size: 22px;
+	color: red;
+}
+h3 {
+	font-size: 20px;
+	color: orange;
+}
+img {
+	max-width: 100%;
+}
+.header-navigation h3 {
+	color: green;
+}
+.list.links {
+	color: blue;
+}
+.header-navigation .list {
+	color: blue;
+}
+#nature_example {
+	color: rgb(0, 163, 185);
+}
+.cost-list * {
+	color: violet
+}
+.cost-list > p {
+	color: darkviolet;
+}
+.img-example ~ h2 {
+	color: purple;
+}
+.header-history {
+	color: grey;
+}
+.header-history h2 {
+	color: rgb(50, 101, 56);
+}
+.main-military h2 {
+	color: rgb(152, 152, 5);
+}
+.text-example > p {
+	color: rgb(215, 215, 0);
+}
+.p-example ~ p {
+	color: rgb(100, 100, 0);
+}
+.main-work .p-example {
+	color: rgb(100, 155, 0);
+}
+.main-nature p {
+	color: rgb(3, 98, 110);
+}
+[class*="__blockexample"] {
+	color: red;
+}
+.main-life h2 {
+	color: darkred;
+}
+.link-back,
+.link-ca {
+	color: red;
+}
