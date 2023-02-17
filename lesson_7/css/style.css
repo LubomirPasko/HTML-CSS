@@ -1,0 +1,204 @@
+@import url("reset.css");
+
+.header {
+	background: rgba(2, 12, 72, 1) url("../img/img-head-back.png") 50% 50% / cover no-repeat;
+	border-radius: 0 5px 5px 0;
+	padding-top: 330px;
+	padding-bottom: 100px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+}
+[class*="__container"] {
+	max-width: 1270px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.text-header__container p {
+	font-size: 12px;
+	line-height: 1.67;
+	color: #E5E5E5;
+	max-width: 605px;
+}
+.p-date {
+	margin-bottom: 15px;
+}
+.text-header__container h1 {
+	max-width: 605px;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 1.6;
+	color: #F8F9FA;
+	margin-bottom: 15px;
+}
+.main-one {
+	font-family: 'Inter', sans-serif;
+	background: rgb(231, 232, 252) url("../img/img_area.png") 50% 50% / cover no-repeat;
+	padding-top: 80px;
+	padding-bottom: 80px;
+} 
+.main-block__container-one {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.text-block,
+.img-block {
+	display: inline-block;
+	max-width: 570px;
+}
+.text-block {
+	margin-right: 179px;
+	margin-bottom: 20px;
+	padding-top: 65px;
+}
+.img-block{
+	vertical-align: top;
+}
+.img-block img {
+	width: 100%;
+	font-size: 0;
+}
+.price {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.33;
+	color: #3056D3;
+	margin-bottom: 13px;
+}
+.text-block h2 {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.25;
+	color: #212B36;
+	margin-bottom: 15px;
+}
+.p-text{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #637381;
+	margin-bottom: 35px;
+}
+.button {
+	display: inline-block;
+	background-color: #3056D3;
+	border-radius: 30px;
+	padding: 10px 30px;
+	text-align: center;
+	max-width: 250px;
+}
+.button a {
+	color: #FFFFFF;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.5;
+}
+.main-two{
+	font-family: 'Inter', sans-serif;
+	padding: 20px 0;
+}
+.lists-block__container li{
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1;
+	color: #637381;
+}
+.lists-block__container h2 {
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 1.08;
+	color: #212B36;
+	margin-bottom: 45px;
+}
+.blue-dot li{
+	background: url("../img/dot.png") 0 4px / 8px 8px no-repeat;
+	padding-left: 18px;
+}
+.red-cross li{
+	background: url("../img/cross.png") 0 0 / 19px 19px no-repeat;
+	padding-left: 29px;
+	line-height: 19px;
+}
+.check-blue li{
+	background: url("../img/check_blue.png") 0 0 / 19px 19px no-repeat;
+	padding-left: 29px;
+	line-height: 19px;
+}
+.arrow li{
+	background: url("../img/arrow.png") 0 -1px / 20px 20px no-repeat;
+	padding-left: 30px;
+}
+.check-green li{
+	background: url("../img/check_green.png") 0 0 / 20px 20px no-repeat;
+	padding-left: 30px;
+	line-height: 20px;
+}
+.stars li{
+	background: url("../img/star.png") 0 0 / 18px 18px no-repeat;
+	padding-left: 28px;
+	line-height: 18px;
+}
+.lists-block__container ul li:not(:last-child) {
+	margin-bottom: 18px;
+}
+.lists-block__container ul:not(:last-child) {
+	margin-bottom: 60px;
+}
+/* Проробка властивостей background */
+.background {
+	font-family: 'Inter', sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1;
+	padding: 40px 0;
+}
+.test {
+	background-color: rgb(252, 90, 90, 0.5);
+	text-align: center;
+	padding: 100px 0;
+}
+.test-two {
+	background-image: url(../img/batman.jpg);
+	background-position: 50% 0;
+	color: yellow;
+	text-align: center;
+	padding: 400px 0;
+}
+.test-three {
+	background-image: url(../img/batman.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50% 0;
+	color: yellow;
+	text-align: center;
+	padding: 400px 0;
+}
+.test-four {
+	text-align: center;
+	padding: 500px 0;
+	background-image: url(../img/batman.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 0 50%;
+	color: yellow;
+	text-align: center;
+	border: 1px solid black;
+}
+.test-five {
+	background: url(../img/batman.jpg) 50% 100% / 250px 150px no-repeat, rgb(0, 0, 0) url(../img/bat.jpeg) 50% 50% / contain no-repeat;
+	text-align: center;
+	padding: 500px 0;
+	color: yellow;
+	text-align: center;
+}
+.test-six {
+	background: linear-gradient(115deg, rgba(52,85,236,1) 2%, rgba(66,175,125,1) 9%, rgba(179,227,167,1) 16%, rgba(174,207,193,1) 40%, rgba(255,190,121,1) 42%, rgba(191,141,121,1) 58%, rgba(238,86,0,1) 66%);
+	text-align: center;
+	padding: 500px 0;
+	color: rgb(20, 89, 80);
+	text-align: center;
+}
