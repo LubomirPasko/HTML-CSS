@@ -1,0 +1,69 @@
+@import url("reset.css");
+
+main {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.2;
+	color: rgb(53, 53, 53);
+}
+
+.image {
+	padding: 40px 0;
+	background: linear-gradient(6deg, rgba(0,39,92,1) 1%, rgba(79,138,171,1) 76%, rgba(255,186,51,1) 98%);
+}
+.image__container {
+	max-width: 1270px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.image__block {
+	border-radius: 5px;
+	box-shadow: 5px -5px 10px black;
+	padding: 10px;
+}
+.image__block:not(:last-child) {
+	margin-bottom: 40px;
+}
+h2, p {
+	margin-bottom: 20px;
+}
+.image__text {
+	text-align: justify;
+	text-indent: 10px;
+}
+.image__header {
+	text-align: center;
+	font-size: 24px;
+	color: black;
+}
+.img {
+	vertical-align: middle;
+	max-width: 100%;
+	border-radius: 10px;
+}
+.image__content {
+	font-size: 0;
+}
+.image__content img:not(:last-child) {
+	margin-right: 20px;
+}
+.content-images__block_team .img {
+	width: 22%;
+}
+.h-320 {
+	height: 320px;
+}
+.content-images__block_service .img {
+	border-radius: 13px;
+}
+.content-images__block:not(:last-child) {
+	margin-bottom: 20px;
+}
+.content-images__row-one {
+	margin-bottom: 20px;
+}
+.content-images__block_center{
+	text-align: center;
+}
