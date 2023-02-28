@@ -41,7 +41,7 @@ h2, p {
 .img {
 	vertical-align: middle;
 	max-width: 100%;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 .image__content {
 	font-size: 0;
