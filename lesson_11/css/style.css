@@ -1,0 +1,122 @@
+@import url("reset.css");
+body {
+	font-family: 'Inter', sans-serif;
+}
+ul {
+	font-size: 0;
+}
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+.header__container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.header__block {
+	padding: 30px 0;
+}
+.header__menu {
+	margin-right: 154px;
+}
+.menu__item,.header__logo,.header__menu,.icons-menu__item,.icons-menu {
+	display: inline-block;
+	vertical-align: middle;
+}
+.header__logo {
+	margin-right: 45px;
+}
+.menu__link {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #212B36;
+}
+.menu__item:not(:last-child) {
+	margin-right: 35px;
+}
+.menu__item.menu__item_categories {
+	margin-right: 45px;
+}
+.menu__link_categories {
+	padding: 9px 33px 9px 20px;
+	background: #F4F7FF;
+	border-radius: 5px;
+}
+.menu__link_categories::after {
+	content: '';
+	background: url(../img/arrow.svg) center no-repeat;
+	display: inline-block;
+	height: 6px;
+	width: 11px;
+	position: relative;
+	left: 13px;
+	bottom: 2px;
+}
+.menu__link_products::after {
+	content: '';
+	background: url(../img/arrow.svg) center no-repeat;
+	display: inline-block;
+	height: 6px;
+	width: 11px;
+	position: relative;
+	left: 7px;
+	bottom: 2px;
+}
+.menu__item:hover .menu__link_products::after {
+	content: '';
+	transform: rotate(90deg);
+	background: url(../img/arrow_right.svg) center no-repeat;
+	display: inline-block;
+	height: 15px;
+	width: 11px;
+	position: relative;
+	left: 7px;
+	bottom: -3px;
+}
+.icons-menu__item:not(:last-child) {
+	margin-right: 20px;
+}
+.menu__link:not(.menu__link_categories):hover {
+color: #3056D3;
+transition: 0.5s all;
+}
+.icons-menu {
+	position: relative;
+}
+.icons-menu__link_counter-heart::after {
+	content: '3';
+	border-radius: 50%;
+	background: #3056D3;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	font-weight: 400;
+	font-size: 11px;
+	line-height: 13px;
+	padding-top: 2px;
+	position: absolute;
+	bottom: 14px;
+	right: 41px;
+}
+.icons-menu__link_counter-busket::after {
+	content: '1';
+	border-radius: 50%;
+	background: #3056D3;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	font-weight: 400;
+	font-size: 11px;
+	line-height: 13px;
+	padding-top: 2px;
+	position: absolute;
+	bottom: 14px;
+	right: -6px;
+}
+
