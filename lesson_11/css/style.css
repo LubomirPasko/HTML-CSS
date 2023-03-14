@@ -1,13 +1,19 @@
 @import url("reset.css");
 body {
 	font-family: 'Inter', sans-serif;
-}
-ul {
-	font-size: 0;
+	background: #E5E5E5;
 }
 .wrapper {
 	overflow: clip;
 	min-height: 100%;
+}
+.header {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 50;
+	background-color: #FFF;
 }
 .header__container {
 	max-width: 1200px;
@@ -18,14 +24,14 @@ ul {
 	padding: 30px 0;
 }
 .header__menu {
-	margin-right: 154px;
+	margin-right: 143px;
 }
 .menu__item,.header__logo,.header__menu,.icons-menu__item,.icons-menu {
 	display: inline-block;
 	vertical-align: middle;
 }
 .header__logo {
-	margin-right: 45px;
+	margin-right: 43px;
 }
 .menu__link {
 	font-weight: 600;
@@ -37,12 +43,24 @@ ul {
 	margin-right: 35px;
 }
 .menu__item.menu__item_categories {
-	margin-right: 45px;
+	margin-right: 43px;
+	position: relative; /* ! Відносно нього позиціонується випадаюче меню */
+	vertical-align: middle;
 }
 .menu__link_categories {
 	padding: 9px 33px 9px 20px;
-	background: #F4F7FF;
 	border-radius: 5px;
+	display: inline-block;
+	transition: all 0.3s;
+}
+.menu__item_categories:hover .menu__link_categories {
+	background: #F4F7FF;
+	transition: all 0.3s;
+}
+.menu__item_categories:hover .menu__wrap-sub {
+	opacity: 1;
+	visibility: visible;
+	transition: 0.3s all;
 }
 .menu__link_categories::after {
 	content: '';
@@ -82,41 +100,253 @@ ul {
 color: #3056D3;
 transition: 0.5s all;
 }
-.icons-menu {
+.icons-menu__item {
 	position: relative;
 }
-.icons-menu__link_counter-heart::after {
-	content: '3';
-	border-radius: 50%;
-	background: #3056D3;
-	color: white;
-	text-align: center;
-	display: inline-block;
-	width: 16px;
-	height: 16px;
+.icons-menu__counter {
+	position: absolute;
+	z-index: 1;
+	color: #FFF;
 	font-weight: 400;
 	font-size: 11px;
 	line-height: 13px;
-	padding-top: 2px;
+}
+.icons-menu__counter_hurt {
+	left: 21px;
+	bottom: 15px;
+}
+.icons-menu__counter_busket {
+	right: -2px;
+	bottom: 17px;
+}
+.icons-menu__link_counter-heart::after {
+	content: '';
+	border-radius: 50%;
+	background: #3056D3;
+	min-width: 16px;
+	min-height: 16px;
 	position: absolute;
-	bottom: 14px;
-	right: 41px;
+	top: -8px;
+	right: -8px;
 }
 .icons-menu__link_counter-busket::after {
-	content: '1';
+	content: '';
 	border-radius: 50%;
 	background: #3056D3;
-	color: white;
-	text-align: center;
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	font-weight: 400;
-	font-size: 11px;
-	line-height: 13px;
-	padding-top: 2px;
+	min-width: 16px;
+	min-height: 16px;
 	position: absolute;
-	bottom: 14px;
-	right: -6px;
+	top: -6px;
+	right: -7px;
+}
+.header__menu {
+	position: relative;
+}
+.menu__sub-menu {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	min-width: 180px;
+	padding: 22px 0;
+	background: #FFFFFF;
+	border: 0.5px solid #E7E7E7;
+	border-radius: 5px;
+}
+.menu__sub-menu::before {
+	content: '';
+	background: url(../img/triangle.svg) center no-repeat;
+	display: inline-block;
+	z-index: 100;
+	width: 33px;
+	height: 20px;
+	position: absolute;
+	top: -15px;
+	left: 17px;
+}
+.sub-list__column,.sub-list__discount {
+	display: inline-block;
+}
+.sub-menu__item {
+	position: relative;
+	padding: 0 24px;
+}
+.sub-menu__item:not(:last-child) {
+	margin-bottom: 13px;
+}
+.sub-menu__link {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #637381;
+}
+.sub-menu__sub-list {
+	min-width: 680px;
+	position: absolute;
+	left: 178px;
+	top: -33px;
+	padding: 30px;
+	background: #FFF;
+	border: 0.5px solid #E7E7E7;
+	border-radius: 5px;
+}
+.sub-list__title {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	color: #212B36;
+	margin-bottom: 20px;
+}
+.sub-list__item {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	color: #637381;
+}
+.sub-list__item:not(:last-child) {
+	margin-bottom: 12px;
+}
+.sub-list__column {
+	margin-right: 80px;
+}
+.sub-list__discount {
+	vertical-align: top;
+	position: relative;
+}
+.sub-list__link:hover {
+	color: #3056D3;
+}
+.sub-menu__link:hover {
+	color: #3056D3;
+}
+.sub-list__percent {
+	position: absolute;
+	bottom: 140px;
+	left: 65px;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 1.2;
+	color: #FFFFFF;
+	text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.22);
+}
+.sub-list__text {
+	position: absolute;
+	bottom: 110px;
+	left: 50px;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	color: #FFFFFF;
+	text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
+}
+.sub-list__info {
+	position: absolute;
+	width: 100%;
+}
+.sub-list__link-shop {
+	position: absolute;
+	display: inline-block;
+	bottom: 60px;
+	left: 70px;
+	font-weight: 700;
+	font-size: 11px;
+	line-height: 1.18;
+	color: #FFFFFF;
+	text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.14);
+	padding: 6px 13px 6px 15px;
+	background: #3056D3;
+	border-radius: 2px;
+}
+.sub-list__link-shop:hover {
+	color: #3056D3;
+	background-color: #FFF;
+	transition: all 0.3s;
+}
+.sub-menu__link_fashion::after {
+	content: '';
+	background: url(../img/arrow_right.svg) center no-repeat;
+	width: 11px;
+	height: 11px;
+	display: inline-block;
+	position: relative;
+	left: 60px;
+}
+.menu__wrap-sub {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 180px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+	padding-top: 40px;
+}
+.sub-menu__wrapper {
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s;
+}
+.sub-menu__item_fashion:hover .sub-menu__wrapper {
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.3s;
 }
 
+/* Тренування */
+.main {
+	padding-top: 110px;
+}
+.main__container {
+	width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.main__item {
+	padding: 20px 0;
+	text-align: center;
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+.main__test-block:not(:last-child) {
+	margin-bottom: 10px;
+}
+.main__text {
+	text-align: justify;
+}
+.main__item_red{
+	background-color: darkred;
+}
+.main__item_blue{
+	background-color: rgb(0, 77, 164);
+	position: sticky;
+	top: 100px;
+	margin-bottom: 0;
+}
+.main__item_green{
+	background-color: rgb(0, 102, 0);
+	position: sticky;
+	top: 100px;
+}
+.main__item_orng{
+	background-color: rgb(136, 88, 0);
+	position: relative;
+	top: 40px;
+	left: 40px;
+}
+.main__item_vlt{
+	background-color: rgb(128, 0, 128);
+	position: absolute;
+	left: 40px;
+	top: 20px;
+	width: 100%;
+	z-index: -1;
+	padding: 30px 0;
+}
+.main__test-block_vlt {
+	position: relative;
+}
+.main__text_blue {
+	padding: 10px 0;
+}
+.main__test-block.main__test-block_blue {
+	margin-bottom: 0;
+}
