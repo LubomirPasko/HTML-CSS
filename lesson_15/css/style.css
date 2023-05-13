@@ -169,6 +169,7 @@ body {
 }
 .text-section {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 32px;
 	justify-content: space-between;
 	flex: 0 1 auto;
