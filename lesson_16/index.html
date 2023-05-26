@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Oswald:wght@400;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson_16</title>
+</head>
+    <body>
+        <div class="wrapper">
+            <header></header>
+            <main class="page">
+                <div class="page__container">
+                    <form id="form01" class="billing" action="#" method="post" enctype="multipart/form-data">
+                        <h2 class="billing__header">Billing Details</h2>
+                        <div class="billing__content">
+                            <div class="billing__row">
+                                <input id="first_name" name="first_name" placeholder="First name*" type="text" class="billing__input" required >
+                                <input id="last_name" name="last_name" placeholder="Last name*" type="text" class="billing__input" required >
+                            </div>
+                            <div class="billing__row">
+                                <input id="address" name="address" placeholder="Address*" type="text" class="billing__input" required >
+                                <input id="address_02" name="address_02" placeholder="Address line 2" type="text" class="billing__input">
+                            </div>
+                            <div class="billing__row">
+                                <select required name="country" id="country" class="billing__input select-menu">
+                                    <option class="select-menu__item" value="" disabled selected hidden>Country*</option>
+                                    <option class="select-menu__item" value="ua">Ukraine</option>
+                                    <option class="select-menu__item" value="usa">USA</option>
+                                    <option class="select-menu__item" value="ca">Canada</option>
+                                    <option class="select-menu__item" value="ge">Germany</option>
+                                    <option class="select-menu__item" value="eq">Equador</option>
+                                </select>
+                                <input name="city" id="city" placeholder="City/Town*" type="text" class="billing__input" required >
+                            </div>
+                            <div class="billing__row">
+                                <input name="postcode" id="postcode" placeholder="Postcode/ZIP*" type="text" class="billing__input" required >
+                                <input name="phone" id="phone" placeholder="Phone*" type="tel" class="billing__input" required >
+                            </div>
+                            <div class="billing__row">
+                                <input name="postcode_02" id="postcode_02" placeholder="Postcode/ZIP*" type="text" class="billing__input" required >
+                                <input name="phone_02" id="phone_02" placeholder="Phone*" type="tel" class="billing__input" required >
+                            </div>
+                            <div class="billing__row">
+                                <textarea name="additional_info" placeholder="Additional information" id="additional_info"  class="billing__input billing__input_textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="billing__checkbox checkbox-billing">
+                            <div class="checkbox-billing__check">
+                                <input checked name="create_account" value="yes" id="check01" type="checkbox" class="checkbox-billing__input">
+                                <label for="check01" class="checkbox-billing__label">Create Account</label>
+                            </div>
+                            <div class="checkbox-billing__check">
+                                <input name="ship_diff_address" value="yes" id="check02" type="checkbox" class="checkbox-billing__input">
+                                <label for="check02" class="checkbox-billing__label">Ship to a different address?</label>
+                            </div>
+                        </div>
+                        <div class="billing__coupon coupon-billing">
+                            <h3 class="coupon-billing__header">
+                                Apply Coupon to get discount!
+                            </h3>
+                            <div class="coupon-billing__row">
+                                <input placeholder="Coupon code" type="text" class="coupon-billing__input">
+                                <button type="button" class="coupon-billing__apply-button">Apply Code</button>
+                            </div>
+                        </div>
+                        <div class="billing__place-order">
+                            <button type="submit" class="billing__order-button">Place an Order</button>
+                        </div>
+                    </form>
+                    <div class="page-section">
+                        <form action="#" class="shipping" method="post" enctype="multipart/form-data">
+                            <h2 class="shipping__header">Shipping Address</h2>
+                            <div class="shipping__fields">
+                                <div class="shipping__row">
+                                    <label class="shipping__label" for="shipping_email">Email Address <span>*</span></label>
+                                    <input class="shipping__input" id="shipping_email" type="email" name="shipping_email" placeholder="roni_cost@example.com" required>
+                                </div>
+                                <div class="shipping__row">
+                                    <label class="shipping__label" for="shipping_password">Password</label>
+                                    <input class="shipping__input" id="shipping_password" type="password" name="shipping_password" placeholder="******************" required>
+                                </div>
+                                <div class="shipping__row">
+                                    <label class="shipping__label" for="shipping_post_code">Zip/Postal Code</label>
+                                    <input class="shipping__input" id="shipping_post_code" type="text" name="shipping_post_code">
+                                </div>
+                            </div>
+                            <div class="shipping__login login-shipping">
+                                <p class="login-shipping__explanation">You already have an account with us. Sign in or continue as guest.</p>
+                                <div class="login-shipping__part">
+                                    <button type="submit" class="login-shipping__button">LOGIN</button>
+                                    <a href="#" class="login-shipping__forgot">Forgot Your Password?</a>
+                                </div>
+                            </div>
+                        </form>
+                        <form action="#" class="method" method="post" enctype="multipart/form-data">
+                            <div class="method__fields">
+                                <div class="method__row">
+                                    <label class="method__label" for="method_name01">First Name <span>*</span></label>
+                                    <input class="method__input" id="method_name01" type="text" name="method_name" required>
+                                </div>
+                                <div class="method__row">
+                                    <label class="method__label" for="method_name02">Last Name <span>*</span></label>
+                                    <input class="method__input" id="method_name02" type="text" name="method_name" required>
+                                </div>
+                                <div class="method__row">
+                                    <label class="method__label" for="method_company">Company</label>
+                                    <input class="method__input" id="method_company" type="text" name="method_company">
+                                </div>
+                                <div class="method__row">
+                                    <label class="method__label" for="method_street">Street Adress <span>*</span></label>
+                                    <input class="method__input" id="method_street" type="text" name="method_street" required>
+                                </div>
+                                <div class="method__row">
+                                    <label class="method__label" for="method_empty"></label>
+                                    <input class="method__input" id="method_empty" type="text" name="method_empty">
+                                </div>
+                                <div class="method__row">
+                                    <label class="method__label" for="method_empty02"></label>
+                                    <input class="method__input" id="method_empty02" type="text" name="method_empty02">
+                                </div>
+                                <div class="method__row">
+                                    <label class="method__label" for="method_country">Country <span>*</span></label>
+                                    <input class="method__input" id="method_country" type="text" name="method_country" required>
+                                </div>
+                                <div class="method__row">
+                                    <label class="method__label" for="method_state">State/Province <span>*</span></label>
+                                    <select class="method__input select-method" id="method_state" name="method_country" required>
+                                        <option class="select-method__item" value="" disabled selected hidden>Please select a region, state or province</option>
+                                        <option class="select-method__item" value="on">Ontario</option>
+                                        <option class="select-method__item" value="bc">British Columbia</option>
+                                        <option class="select-method__item" value="sk">Saskachevan</option>
+                                        <option class="select-method__item" value="ns">Nova Scotia</option>
+                                        <option class="select-method__item" value="ab">Alberta</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="method__shipping">
+                                <h2 class="method__title">Shipping Methods</h2>
+                                <div class="method__radio radio-method">
+                                    <div class="radio-method__row">
+                                        <input id="radio-method" name="radio-method" value="5" type="radio" class="radio-method__input" checked>
+                                        <label for="radio-method" class="radio-method__label radio-method__label_marker">$5.00</label>
+                                        <label for="radio-method" class="radio-method__label">Fixed</label>
+                                        <label for="radio-method" class="radio-method__label">Flat Rate</label>
+                                    </div>
+                                    <div class="radio-method__row">
+                                        <input id="radio-method02" name="radio-method" value="10" type="radio" class="radio-method__input">
+                                        <label for="radio-method02" class="radio-method__label radio-method__label_marker">$10.00</label>
+                                        <label for="radio-method02" class="radio-method__label">Table Rate</label>
+                                        <label for="radio-method02" class="radio-method__label">Best Way</label>
+                                    </div>
+                                </div>
+                                <div class="method__buttons">
+                                    <button type="submit" class="method__button">NEXT</button>
+                                    <a href="#form01" class="method__button-back">BACK</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <footer></footer>
+        </div>
+    <!--       <script src="js/script.js"></script> -->
+    </body>
+</html> 
