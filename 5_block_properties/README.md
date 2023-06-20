@@ -6,3 +6,10 @@
 <div style="display: flex; flex-wrap: wrap;">
 <a href="https://lubomirpasko.github.io/HTML-CSS/5_block_properties">Visual Example</a>
 </div>
+<p>A bit more practice</p>
+<div style="display: flex; flex-wrap: wrap;">
+<a href="https://github.com/LubomirPasko/HTML-CSS/blob/main/6_practice/index.html">Code Example</a>
+</div>
+<div style="display: flex; flex-wrap: wrap;">
+<a href="https://lubomirpasko.github.io/HTML-CSS/6_practice">Visual Example</a>
+</div>
