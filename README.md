@@ -21,4 +21,5 @@ Content
 14. <a href="https://github.com/LubomirPasko/HTML-CSS/blob/main/17_adaptive">HTML Responsive Web Design</a>
 
 <h2>My Frontend RoadMap</h2>
-![alt text](https://github.com/LubomirPasko/HTML-CSS/blob/main/Frontend.png)
+
+![alt text](https://github.com/LubomirPasko/HTML-CSS/blob/main/Frontend1.png)
